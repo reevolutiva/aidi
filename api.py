@@ -16,7 +16,10 @@ def process():
 def aidi_create():
     contenido = request.json
     print(contenido)
-    print(contenido.content)
+    if 'content' in contenido:
+        print(contenido['content'])
+    else:
+        return 'Error: No content in JSON', 400
     return 'OK', 200
 
 
