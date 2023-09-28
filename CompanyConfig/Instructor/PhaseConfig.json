@@ -1,0 +1,44 @@
+{
+  "PreSkechig":{
+    
+  },
+  "Skechig": {
+    "assistant_role_name": "Product Mannager",
+    "user_role_name": "Producer Executive",
+    "phase_prompt": [
+      "Reevolutiva hace cursos de exelente calidad que instruyen de manera conocimiento de manera memorable",
+      "Nececito que imagines como seria el titulos de un curso que pretende los siguientes objetivos: {objetivos} dirigido a el siguiente publico: {public}",
+      "Necesto que imagines y escribas uan descripcion de como seria este curso.",
+      "Nececito que me lo entregues en la siguiente estructura:",
+      "{titulo_del_curso}",
+      "{descripcion_del_curso}"
+    ]
+  },
+  "DefineLearningOutcomes":{
+    "assistant_role_name":"Product Mannager",
+    "user_role_name":"Instructional Designer",
+    "phase_prompt":[
+      "Esta es la descripcion del curso: {descripcion}",
+      "Estos son los contenidos: {contenidos}",
+      "Estos son los objetivos de aprendisaje: {objetivos}",
+      "Nececito que definas cuales seran los resultados del aprendisaje de cada uno de los modulos del curso, teniendo en cuenta el contenido, la descropcion del curso y los objetivos de aprendisaje",
+      "Muestrame los resultados de aprendisaje en la siguiente estructura",
+      ""
+    ]
+  },
+  "DefineStructure":{
+    "assistant_role_name":"Product Mannager",
+    "user_role_name":"Instructional Designer",
+    "phase_prompt":[]
+  },
+  "DefineAsignaments":{
+    "assistant_role_name":"Product Mannager",
+    "user_role_name":"Instructional Designer",
+    "phase_prompt":[]
+  },
+  "CreateContent":{
+    "assistant_role_name":"Product Mannager",
+    "user_role_name":"Content Creator",
+    "phase_prompt":[]
+  }
+}
