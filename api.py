@@ -2,14 +2,28 @@ from flask import Flask, request
 
 from langchain.prompts import PromptTemplate
 
+import os
+
 app = Flask(__name__)
 
 @app.route('/process', methods=['POST'])
 def process():
     # Aquí es donde procesaremos los argumentos enviados en el cuerpo de la petición.
     # Por ahora, simplemente imprimiremos los argumentos para verificar que todo funciona correctamente.
-    print(request)
-    print(request.json)
+ 
+    body = request.json
+
+    config = body["config"]
+    org = body["org"]
+    task = body["task"]
+    name = body["name"]   
+   
+    comando = f'python chatDevCore.py  --task "{task}" --name "{name}"'
+
+    #print(comando)
+
+    os.system(comando)
+    
     return 'OK', 200
 
 
@@ -24,7 +38,7 @@ def aidi_create():
     
     # Crear un course config
     if target == "course-setting" and action == "create":
-         res = course_setting_generate(contentido)
+        res = course_setting_generate(contentido)
          #print(res)
         #crearFirstPrompt()
 
@@ -63,7 +77,7 @@ def course_setting_generate(prompt):
                                    weeks=prompt["weeks"],
                                    course_level=prompt["course_level"])
     
-    print(template)
+    print(res)
     print(formatted_prompt)
 
     return formatted_prompt

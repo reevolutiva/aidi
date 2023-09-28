@@ -1,0 +1,2 @@
+# Requirements for Basic Calculator Application
+tkinter==8.6.10
