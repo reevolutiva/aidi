@@ -14,12 +14,15 @@ def process():
 
 @app.route('/chatdev', methods=['POST'])
 def aidi_create():
-    contenido = request.json
-    print(contenido)
-    if 'content' in contenido:
-        print(contenido['content'])
-    else:
-        return 'Error: No content in JSON', 400
+    body = request.json
+    target = body["target"]
+    action = body["action"]
+    contentido = body["content"]
+
+    print(body)
+    
+
+
     return 'OK', 200
 
 
