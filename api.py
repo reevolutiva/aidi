@@ -52,18 +52,18 @@ def course_setting_generate(prompt):
     #print(template)
 
 
-    res.format( de_que_trata=prompt["de_que_trata"], 
-                participantes_y_metas=prompt["participantes_y_metas"],
-                conocmientos_base=prompt["conocmientos_base"],
-                curso_modalidad=prompt["modalidad"],
-                idioma=prompt["idioma"],
-                mooc=prompt["mooc"],
-                project_bases=prompt["project_bases"],
-                task_prototype=prompt["task_prototype"],
-                weeks=prompt["weeks"],
-                course_level=prompt["course_level"])
+    formatted_prompt = res.format( de_que_trata=prompt["de_que_trata"], 
+                                   participantes_y_metas=prompt["participantes_y_metas"],
+                                   conocmientos_base=prompt["conocmientos_base"],
+                                   curso_modalidad=prompt["modalidad"],
+                                   idioma=prompt["idioma"],
+                                   mooc=prompt["mooc"],
+                                   project_bases=prompt["project_bases"],
+                                   task_prototype=prompt["task_prototype"],
+                                   weeks=prompt["weeks"],
+                                   course_level=prompt["course_level"])
     
     print(template)
-    print(res)
+    print(formatted_prompt)
 
-    return res
+    return formatted_prompt
