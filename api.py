@@ -12,6 +12,8 @@ def process():
     return 'OK', 200
 
 
+from your_module import crearFirstPrompt  # Asegúrate de que esta ruta de importación sea correcta
+
 @app.route('/chatdev', methods=['POST'])
 def aidi_create():
     body = request.json
@@ -20,6 +22,11 @@ def aidi_create():
     contentido = body["content"]
 
     print(body)
+    
+    if target == "course-setting" and action == "create":
+        crearFirstPrompt()
+
+    return 'OK', 200
     
 
 
