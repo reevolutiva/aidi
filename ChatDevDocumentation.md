@@ -30,3 +30,30 @@ chat_chain.execute_chain()
 ```
 
 Esto ejecutará toda la cadena de fases de chat según lo especificado en la configuración, produciendo un archivo de registro en el proceso.
+
+## Documentación de la Clase ChatEnvConfig
+
+La clase `ChatEnvConfig` es una parte integral del módulo chatdev. Se utiliza para configurar el entorno de chat, incluyendo la estructura, la lluvia de ideas, el diseño de la interfaz de usuario y la gestión de Git.
+
+### Atributos Clave
+
+- `clear_structure`: Un booleano que indica si se debe limpiar la estructura existente.
+- `brainstorming`: Un booleano que indica si se debe realizar una sesión de lluvia de ideas.
+- `gui_design`: Un booleano que indica si se debe diseñar una interfaz de usuario gráfica.
+- `git_management`: Un booleano que indica si se debe gestionar el repositorio de Git.
+
+### Métodos Clave
+
+- `__init__`: Inicializa la instancia de ChatEnvConfig con los parámetros de configuración.
+
+- `__str__`: Devuelve una representación en cadena de la configuración del entorno de chat.
+
+## Uso
+
+Para usar la clase `ChatEnvConfig`, necesitas proporcionar los parámetros de configuración durante la inicialización.
+
+```python
+chat_env_config = ChatEnvConfig(clear_structure=True, brainstorming=True, gui_design=True, git_management=True)
+```
+
+Esto creará una configuración de entorno de chat que puede ser utilizada para inicializar una instancia de `ChatEnv`.
