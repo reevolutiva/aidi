@@ -1,17 +1,17 @@
 ## ComposedPhase
-This is an abstract base class for all composed phases. It initializes the phase name, cycle number, composition, configuration of all simple phases, configuration of all roles, model type, and log file path. It also contains abstract methods that need to be implemented in the child classes.
+Esta es una clase base abstracta para todas las fases compuestas. Inicializa el nombre de la fase, el número de ciclo, la composición, la configuración de todas las fases simples, la configuración de todos los roles, el tipo de modelo y la ruta del archivo de registro. También contiene métodos abstractos que deben ser implementados en las clases hijas.
 
 ## Art
-This class inherits from the ComposedPhase class. It doesn't implement any additional functionality.
+Esta clase hereda de la clase ComposedPhase. No implementa ninguna funcionalidad adicional.
 
 ## CodeCompleteAll
-This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used to complete all the code.
+Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos de la clase ComposedPhase. Se utiliza para completar todo el código.
 
 ## CodeReview
-This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for code review.
+Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos de la clase ComposedPhase. Se utiliza para la revisión de código.
 
 ## HumanAgentInteraction
-This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for human-agent interaction.
+Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos de la clase ComposedPhase. Se utiliza para la interacción entre humanos y agentes.
 
 ## Test
-This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for testing.
+Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos de la clase ComposedPhase. Se utiliza para pruebas.
