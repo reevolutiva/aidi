@@ -1,5 +1,7 @@
 from flask import Flask, request
 
+from langchain.prompts import PromptTemplate
+
 import os
 
 app = Flask(__name__)
@@ -11,15 +13,16 @@ def process():
  
     body = request.json
 
-    comand = create_prompt_chat_dev( "chatDevCore.py" , "ReevolutivaResumen" , body) 
-
-    print(comand)
+    config = body["config"]
+    org = body["org"]
+    task = body["task"]
+    name = body["name"]   
    
-    #comando = f'python chatDevCore.py  --task "{task}" --name "{name}"'
+    comando = f'python chatDevCore.py  --task "{task}" --name "{name}"'
 
     #print(comando)
 
-    #os.system(comando)
+    os.system(comando)
     
     return 'OK', 200
 
@@ -35,20 +38,39 @@ def aidi_create():
     
     # Crear un course config
     if target == "course-setting" and action == "create":
-        ##res = course_setting_generate(contentido)
+        res = course_setting_generate(contentido)
         print(res)
         #crearFirstPrompt()
 
     return 'OK', 200
 
 
-def create_prompt_chat_dev( core , config , body ):
+def course_setting_generate(prompt):
+    template = """
+          El curso trata sobre '{de_que_trata}'.
+          Los participantes de curso y sus metas son: '{participantes_y_metas}'.
+          Los conocmientos necesarios antes de tomar el curso son: '{conocmientos_base}'.
+          El curso se creare en el idioma: '{idioma}'.
+          La modalidad del curso sera: '{curso_modalidad}'.
 
-    res = ""
+          ¿Optimiza de forma masiva el aprendisaje en la plataforma? '{mooc}'.
+          ¿Optimiza el curso para aprendizaje basado en grupos pequeño? '{project_bases}'.
+          ¿Generar prototipos de tareas para posterior elaboracion? '{task_prototype}'.
 
-    for name, value in body.items():
-        res = res + f"--{name} '{value}' "
+          El curso durara {weeks} semanas.
+          El nivel del curso sera {course_level}
+          """
+    res = PromptTemplate.from_template(template)
+
+    formatted_prompt = res.format( de_que_trata=prompt["de_que_trata"], 
+                                   participantes_y_metas=prompt["participantes_y_metas"],
+                                   conocmientos_base=prompt["conocmientos_base"],
+                                   curso_modalidad=prompt["modalidad"],
+                                   idioma=prompt["idioma"],
+                                   mooc=prompt["mooc"],
+                                   project_bases=prompt["project_bases"],
+                                   task_prototype=prompt["task_prototype"],
+                                   weeks=prompt["weeks"],
+                                   course_level=prompt["course_level"])
     
-    response = f"python {core} --config '{config}' {res}"
-
-    return response
+    return formatted_prompt

@@ -4,13 +4,13 @@
       "phase": "DI_TitleCreation",
       "phaseType": "SimplePhase",
       "max_turn_step": -1,
-      "need_reflect": "False"
+      "need_reflect": "True"
     },
     {
       "phase": "DI_ResumeCreation",
       "phaseType": "SimplePhase",
       "max_turn_step": -1,
-      "need_reflect": "False"
+      "need_reflect": "True"
     }
   ],
   "recruitments": [
@@ -19,7 +19,7 @@
   ],
   "clear_structure": "True",
   "brainstorming": "False",
-  "gui_design": "False",
+  "gui_design": "True",
   "git_management": "False",
   "self_improve": "False"
 }

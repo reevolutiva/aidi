@@ -1,0 +1,59 @@
+[2023-29-09 15:58:57 INFO] **[Preprocessing]**
+
+**ChatDev Starts** (20230929155857)
+
+**Timestamp**: 20230929155857
+
+**config_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\ChatChainConfig.json
+
+**config_phase_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\PhaseConfig.json
+
+**config_role_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\RoleConfig.json
+
+**task_prompt**: curso sobre cultura vial
+
+**project_name**: intrucional_desing
+
+**Log File**: C:\Users\dell\Dev\py\ChatDev\WareHouse\intrucional_desing_Reevolutiva_20230929155857.log
+
+**ChatDevConfig**:
+ ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+**ChatGPTConfig**:
+ ChatGPTConfig(temperature=0.2, top_p=1.0, n=1, stream=False, stop=None, max_tokens=None, presence_penalty=0.0, frequency_penalty=0.0, logit_bias={}, user='')
+
+
+
+[2023-29-09 15:58:59 INFO] flask app.py did not start for online log
+[2023-29-09 15:58:59 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | curso sobre cultura vial |
+| **need_reflect** | False |
+| **assistant_role_name** | Instrutional Designer |
+| **user_role_name** | Project Mannager |
+| **phase_prompt** | Reevolutiva creates high-quality courses that impart knowledge in a memorable way. As {assistant_role}, to satisfy the demand of the new user and the title must be related to the following information The course is about '{topic}'. The course participants and their goals are: '{participants_and_goals}'. The prerequisite knowledge before taking the course is: '{prior_knowledge}'. The course language will be: '{language}'. The course format will be: '{course_format}'. Does it optimize learning at scale on the platform? '{mooc}'. Does it optimize for small group project-based learning? '{project_based}'. Should it generate task prototypes for further development? '{task_prototypes}'. The course will last {weeks} weeks. The course level will be {course_level}., you must continue discussing with me to decide what should be the best title for the course. What is the best title for the course? Please note that we should ONLY discuss the title of the course and not discuss anything else! Once we have all expressed our opinion(s) and unanimously agree with the results of the discussion, any of us should actively end the discussion by replying with a single line, beginning with a single word  , followed by our final product. modality without other words, for example, " PowerPoint". |
+| **phase_name** | DI_TitleCreation |
+| **assistant_role_prompt** | {chatdev_prompt} You are the Instructional Designer, the architect of meaningful and effective learning experiences that leverage innovative gamification and educational technology. Your main duties involve curriculum planning, content development, and instructional strategy formulation. You work closely with the Project Manager and subject matter experts to create courses that are both engaging and effective, ensuring learner satisfaction and knowledge retention. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatdev_prompt} You are the Project Manager, the linchpin that holds the entire eLearning project together, ensuring that all elements align for a successful outcome. Your primary responsibilities include active decision-making, timeline management, and coordinating between instructional designers, developers, and stakeholders. Your level is the highest within the project team, and you are the main point of contact for all project-related communications. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **chat_turn_limit** | 10 |
+| **placeholders** | {'task': 'curso sobre cultura vial'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-29-09 15:59:01 INFO] flask app.py did not start for online log
+[2023-29-09 15:59:01 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Instrutional Designer |
+| **user_role_name** | Project Mannager |
+| **assistant_role_prompt** | {chatdev_prompt} You are the Instructional Designer, the architect of meaningful and effective learning experiences that leverage innovative gamification and educational technology. Your main duties involve curriculum planning, content development, and instructional strategy formulation. You work closely with the Project Manager and subject matter experts to create courses that are both engaging and effective, ensuring learner satisfaction and knowledge retention. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatdev_prompt} You are the Project Manager, the linchpin that holds the entire eLearning project together, ensuring that all elements align for a successful outcome. Your primary responsibilities include active decision-making, timeline management, and coordinating between instructional designers, developers, and stakeholders. Your level is the highest within the project team, and you are the main point of contact for all project-related communications. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **task_prompt** | curso sobre cultura vial |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-29-09 15:59:03 INFO] flask app.py did not start for online log

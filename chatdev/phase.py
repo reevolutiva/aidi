@@ -642,25 +642,13 @@ class DI_TitleCreation(Phase):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
-        
-        self.phase_env.update({
-            "topic": chat_env.env_dict['topic'],
-            "participants_and_goals": chat_env.env_dict['participants_and_goals'],
-            "prior_knowledge": chat_env.env_dict['prior_knowledge'],
-            "language": chat_env.env_dict['language'],
-            "course_format": chat_env.env_dict['course_format'],
-            "mooc": chat_env.env_dict['mooc'],
-            "project_based": chat_env.env_dict['project_based'],
-            "task_prototypes": chat_env.env_dict['task_prototypes'],
-            "weeks": chat_env.env_dict['weeks'],
-            "course_level": chat_env.env_dict['course_level']
-            })
+        self.phase_env.update({"task": chat_env.env_dict['task_prompt']})
       
         
     def update_chat_env(self, chat_env) -> ChatEnv:
         if len(self.seminar_conclusion) > 0 and "<INFO>" in self.seminar_conclusion:
-            chat_env.env_dict['title'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
-        else: chat_env.env_dict['title'] = "No hay titulo"
+            chat_env.env_dict['idea'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+        else: chat_env.env_dict['ida'] = "No hay idea"
         
         return chat_env
 
@@ -670,23 +658,13 @@ class DI_ResumeCreation(Phase):
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
-        self.phase_env.update({
-            "topic": chat_env.env_dict['topic'],
-            "participants_and_goals": chat_env.env_dict['participants_and_goals'],
-            "prior_knowledge": chat_env.env_dict['prior_knowledge'],
-            "language": chat_env.env_dict['language'],
-            "course_format": chat_env.env_dict['course_format'],
-            "mooc": chat_env.env_dict['mooc'],
-            "project_based": chat_env.env_dict['project_based'],
-            "task_prototypes": chat_env.env_dict['task_prototypes'],
-            "weeks": chat_env.env_dict['weeks'],
-            "course_level": chat_env.env_dict['course_level']
-            })
-        
+        self.phase_env.update({"task": chat_env.env_dict['task_prompt'], 
+                               "idea": chat_env.env_dict["idea"]
+                               })
         
     def update_chat_env(self, chat_env) -> ChatEnv:
         if len(self.seminar_conclusion) > 0 and "<INFO>" in self.seminar_conclusion:
-            chat_env.env_dict['resume'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
-        else: chat_env.env_dict['resume'] = "No hay titulo"
+            chat_env.env_dict['idea'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+        else: chat_env.env_dict['idea'] = "No hay idea"
         
         return chat_env
