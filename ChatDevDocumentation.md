@@ -1,17 +1,17 @@
-# Documentation for chatdev\codes.py
+# Documentación para chatdev\codes.py
 
-## Class: Codes
+## Clase: Codes
 
-This class is used to manage and manipulate codebooks. It has several methods:
+Esta clase se utiliza para gestionar y manipular libros de códigos. Tiene varios métodos:
 
-- `__init__(self, generated_content="")`: Initializes the class with the given generated content. It also extracts filenames from the content and populates the codebooks.
+- `__init__(self, generated_content="")`: Inicializa la clase con el contenido generado dado. También extrae los nombres de archivo del contenido y llena los libros de códigos.
 
-- `_format_code(self, code)`: Formats the given code by removing empty lines.
+- `_format_code(self, code)`: Formatea el código dado eliminando las líneas vacías.
 
-- `_update_codes(self, generated_content)`: Updates the codebooks with the new generated content. It also logs the changes.
+- `_update_codes(self, generated_content)`: Actualiza los libros de códigos con el nuevo contenido generado. También registra los cambios.
 
-- `_rewrite_codes(self, git_management)`: Rewrites the codes in the codebooks to the directory. It also manages git if git_management is True.
+- `_rewrite_codes(self, git_management)`: Reescribe los códigos en los libros de códigos en el directorio. También gestiona git si git_management es True.
 
-- `_get_codes(self)`: Returns a string representation of the codes in the codebooks.
+- `_get_codes(self)`: Devuelve una representación en cadena de los códigos en los libros de códigos.
 
-- `_load_from_hardware(self, directory)`: Loads codes from the given directory into the codebooks. It also logs the number of files read.
+- `_load_from_hardware(self, directory)`: Carga códigos desde el directorio dado en los libros de códigos. También registra el número de archivos leídos.
