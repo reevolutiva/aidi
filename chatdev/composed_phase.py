@@ -203,9 +203,19 @@ class Art(ComposedPhase):
 
 class CodeCompleteAll(ComposedPhase):
     def __init__(self, **kwargs):
+        """
+        Constructor de la clase CodeCompleteAll, que hereda de ComposedPhase.
+        Args:
+            **kwargs: Argumentos variables.
+        """
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
+        """
+        Método para actualizar el entorno de la fase. En la clase CodeCompleteAll, este método busca todos los archivos .py en el directorio especificado y los añade al entorno de la fase.
+        Args:
+            chat_env: Entorno del chat.
+        """
         pyfiles = [filename for filename in os.listdir(chat_env.env_dict['directory']) if filename.endswith(".py")]
         num_tried = defaultdict(int)
         num_tried.update({filename: 0 for filename in pyfiles})
@@ -216,9 +226,23 @@ class CodeCompleteAll(ComposedPhase):
         })
 
     def update_chat_env(self, chat_env):
+        """
+        Método para actualizar el entorno del chat. En la clase CodeCompleteAll, este método simplemente devuelve el entorno del chat sin realizar ninguna modificación.
+        Args:
+            chat_env: Entorno del chat.
+        Returns:
+            chat_env: Entorno del chat sin modificaciones.
+        """
         return chat_env
 
     def break_cycle(self, phase_env) -> bool:
+        """
+        Método para definir las condiciones de interrupción del ciclo. En la clase CodeCompleteAll, este método devuelve True si no hay archivos sin implementar, lo que significa que se interrumpe el ciclo.
+        Args:
+            phase_env: Entorno de la fase.
+        Returns:
+            True si no hay archivos sin implementar, False en caso contrario.
+        """
         if phase_env['unimplemented_file'] == "":
             return True
         else:
