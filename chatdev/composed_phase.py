@@ -23,13 +23,14 @@ class ComposedPhase(ABC):
                  log_filepath: str = ""
                  ):
         """
-
         Args:
-            phase_name: name of this phase
-            cycle_num: loop times of this phase
-            composition: list of SimplePhases in this ComposePhase
-            config_phase: configuration of all SimplePhases
-            config_role: configuration of all Roles
+            phase_name: nombre de esta fase
+            cycle_num: número de veces que se repite esta fase
+            composition: lista de SimplePhases en este ComposePhase
+            config_phase: configuración de todas las SimplePhases
+            config_role: configuración de todos los Roles
+            model_type: tipo de modelo a utilizar
+            log_filepath: ruta del archivo de registro
         """
 
         self.phase_name = phase_name
