@@ -1,0 +1,25 @@
+{
+  "chain": [
+    {
+      "phase": "DI_TitleCreation",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "False"
+    },
+    {
+      "phase": "DI_ResumeCreation",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "False"
+    }
+  ],
+  "recruitments": [
+    "Instrutional Designer",
+    "Project Mannager"
+  ],
+  "clear_structure": "True",
+  "brainstorming": "False",
+  "gui_design": "False",
+  "git_management": "False",
+  "self_improve": "False"
+}

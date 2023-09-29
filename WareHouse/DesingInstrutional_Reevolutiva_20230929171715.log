@@ -1,0 +1,59 @@
+[2023-29-09 17:17:15 INFO] **[Preprocessing]**
+
+**ChatDev Starts** (20230929171715)
+
+**Timestamp**: 20230929171715
+
+**config_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevolutivaResumen\ChatChainConfig.json
+
+**config_phase_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevolutivaResumen\PhaseConfig.json
+
+**config_role_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevolutivaResumen\RoleConfig.json
+
+**task_prompt**: El curso trata sobre Analizar cuantitativamente un proyecto de vías, permitiendo a los tomadores de decisión contar con una correcta valoración y ponderación de todos los aspectos relevantes del proyecto. Al finalizar el módulo, los o las participantes estarán en condiciones de identificar las variables que intervienen en una valoración financiera de un proyecto de licitación de Concesiones Viales. \n Tema 1: Estructuración e identificación de los flujos de caja de un proyecto. \n Tema 2: Determinación de tasas de descuento a aplicar en la evaluación. \n Tema 3: Estructuración financiera y tributaria del modelo de valoración. \n Tema 4: Valorización del proyecto. \n Tema 5: Evaluación expost del proyecto estudiado.. Los participantes de curso y sus metas son: Colaboradores de una organización. Los conocmientos necesarios antes de tomar el curso son: Para realizar este curso, se requiere poseer nociones financieras de flujo de caja de proyecto y dominio medio de Excel. Idealmente conocimientos de evaluación y gestión de proyectos.. El curso se creare en el idioma: Español. La modalidad del curso sera: Curso Presencia. ¿Optimiza de forma masiva el aprendisaje en la plataforma? yes. ¿Optimiza el curso para aprendizaje basado en grupos pequeño? yes. ¿Generar prototipos de tareas para posterior elaboracion? yes. El curso durara 5 semanas. El nivel del curso sera low
+
+**project_name**: DesingInstrutional
+
+**Log File**: C:\Users\dell\Dev\py\ChatDev\WareHouse\DesingInstrutional_Reevolutiva_20230929171715.log
+
+**ChatDevConfig**:
+ ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+**ChatGPTConfig**:
+ ChatGPTConfig(temperature=0.2, top_p=1.0, n=1, stream=False, stop=None, max_tokens=None, presence_penalty=0.0, frequency_penalty=0.0, logit_bias={}, user='')
+
+
+
+[2023-29-09 17:17:18 INFO] flask app.py did not start for online log
+[2023-29-09 17:17:18 INFO] System: **[chatting]**
+
+| Parameter | Value |
+| --- | --- |
+| **task_prompt** | El curso trata sobre Analizar cuantitativamente un proyecto de vías, permitiendo a los tomadores de decisión contar con una correcta valoración y ponderación de todos los aspectos relevantes del proyecto. Al finalizar el módulo, los o las participantes estarán en condiciones de identificar las variables que intervienen en una valoración financiera de un proyecto de licitación de Concesiones Viales. \n Tema 1: Estructuración e identificación de los flujos de caja de un proyecto. \n Tema 2: Determinación de tasas de descuento a aplicar en la evaluación. \n Tema 3: Estructuración financiera y tributaria del modelo de valoración. \n Tema 4: Valorización del proyecto. \n Tema 5: Evaluación expost del proyecto estudiado.. Los participantes de curso y sus metas son: Colaboradores de una organización. Los conocmientos necesarios antes de tomar el curso son: Para realizar este curso, se requiere poseer nociones financieras de flujo de caja de proyecto y dominio medio de Excel. Idealmente conocimientos de evaluación y gestión de proyectos.. El curso se creare en el idioma: Español. La modalidad del curso sera: Curso Presencia. ¿Optimiza de forma masiva el aprendisaje en la plataforma? yes. ¿Optimiza el curso para aprendizaje basado en grupos pequeño? yes. ¿Generar prototipos de tareas para posterior elaboracion? yes. El curso durara 5 semanas. El nivel del curso sera low |
+| **need_reflect** | False |
+| **assistant_role_name** | Instrutional Designer |
+| **user_role_name** | Project Mannager |
+| **phase_prompt** | Reevolutiva creates high-quality courses that impart knowledge in a memorable way. task principal: "{task}" As {assistant_role}, to satisfy the demand of the new user and the title must be related to the following information The course "{ideas}"., you must continue discussing with me to decide what should be the best title for the course. What is the best title for the course? Please note that we should ONLY discuss the title of the course and not discuss anything else! Once we have all expressed our opinion(s) and unanimously agree with the results of the discussion, any of us should actively end the discussion by replying with a single line, beginning with a single word  , followed by our final product. modality without other words, for example, " PowerPoint". |
+| **phase_name** | DI_TitleCreation |
+| **assistant_role_prompt** | {chatdev_prompt} You are the Instructional Designer, the architect of meaningful and effective learning experiences that leverage innovative gamification and educational technology. Your main duties involve curriculum planning, content development, and instructional strategy formulation. You work closely with the Project Manager and subject matter experts to create courses that are both engaging and effective, ensuring learner satisfaction and knowledge retention. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatdev_prompt} You are the Project Manager, the linchpin that holds the entire eLearning project together, ensuring that all elements align for a successful outcome. Your primary responsibilities include active decision-making, timeline management, and coordinating between instructional designers, developers, and stakeholders. Your level is the highest within the project team, and you are the main point of contact for all project-related communications. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **chat_turn_limit** | 10 |
+| **placeholders** | {'task': 'El curso trata sobre Analizar cuantitativamente un proyecto de vías, permitiendo a los tomadores de decisión contar con una correcta valoración y ponderación de todos los aspectos relevantes del proyecto. Al finalizar el módulo, los o las participantes estarán en condiciones de identificar las variables que intervienen en una valoración financiera de un proyecto de licitación de Concesiones Viales. \n Tema 1: Estructuración e identificación de los flujos de caja de un proyecto. \n Tema 2: Determinación de tasas de descuento a aplicar en la evaluación. \n Tema 3: Estructuración financiera y tributaria del modelo de valoración. \n Tema 4: Valorización del proyecto. \n Tema 5: Evaluación expost del proyecto estudiado.. Los participantes de curso y sus metas son: Colaboradores de una organización. Los conocmientos necesarios antes de tomar el curso son: Para realizar este curso, se requiere poseer nociones financieras de flujo de caja de proyecto y dominio medio de Excel. Idealmente conocimientos de evaluación y gestión de proyectos.. El curso se creare en el idioma: Español. La modalidad del curso sera: Curso Presencia. ¿Optimiza de forma masiva el aprendisaje en la plataforma? yes. ¿Optimiza el curso para aprendizaje basado en grupos pequeño? yes. ¿Generar prototipos de tareas para posterior elaboracion? yes. El curso durara 5 semanas. El nivel del curso sera low'} |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-29-09 17:17:20 INFO] flask app.py did not start for online log
+[2023-29-09 17:17:20 INFO] System: **[RolePlaying]**
+
+| Parameter | Value |
+| --- | --- |
+| **assistant_role_name** | Instrutional Designer |
+| **user_role_name** | Project Mannager |
+| **assistant_role_prompt** | {chatdev_prompt} You are the Instructional Designer, the architect of meaningful and effective learning experiences that leverage innovative gamification and educational technology. Your main duties involve curriculum planning, content development, and instructional strategy formulation. You work closely with the Project Manager and subject matter experts to create courses that are both engaging and effective, ensuring learner satisfaction and knowledge retention. Here is a new customer's task: {task}. To complete the task, you must write a response that appropriately solves the requested instruction based on your expertise and customer's needs. |
+| **user_role_prompt** | {chatdev_prompt} You are the Project Manager, the linchpin that holds the entire eLearning project together, ensuring that all elements align for a successful outcome. Your primary responsibilities include active decision-making, timeline management, and coordinating between instructional designers, developers, and stakeholders. Your level is the highest within the project team, and you are the main point of contact for all project-related communications. Here is a new customer's task: {task}. To complete the task, I will give you one or more instructions, and you must help me to write a specific solution that appropriately solves the requested instruction based on your expertise and my needs. |
+| **task_prompt** | El curso trata sobre Analizar cuantitativamente un proyecto de vías, permitiendo a los tomadores de decisión contar con una correcta valoración y ponderación de todos los aspectos relevantes del proyecto. Al finalizar el módulo, los o las participantes estarán en condiciones de identificar las variables que intervienen en una valoración financiera de un proyecto de licitación de Concesiones Viales. \n Tema 1: Estructuración e identificación de los flujos de caja de un proyecto. \n Tema 2: Determinación de tasas de descuento a aplicar en la evaluación. \n Tema 3: Estructuración financiera y tributaria del modelo de valoración. \n Tema 4: Valorización del proyecto. \n Tema 5: Evaluación expost del proyecto estudiado.. Los participantes de curso y sus metas son: Colaboradores de una organización. Los conocmientos necesarios antes de tomar el curso son: Para realizar este curso, se requiere poseer nociones financieras de flujo de caja de proyecto y dominio medio de Excel. Idealmente conocimientos de evaluación y gestión de proyectos.. El curso se creare en el idioma: Español. La modalidad del curso sera: Curso Presencia. ¿Optimiza de forma masiva el aprendisaje en la plataforma? yes. ¿Optimiza el curso para aprendizaje basado en grupos pequeño? yes. ¿Generar prototipos de tareas para posterior elaboracion? yes. El curso durara 5 semanas. El nivel del curso sera low |
+| **with_task_specify** | False |
+| **model_type** | ModelType.GPT_3_5_TURBO |
+
+[2023-29-09 17:17:22 INFO] flask app.py did not start for online log

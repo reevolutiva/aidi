@@ -647,8 +647,8 @@ class DI_TitleCreation(Phase):
         
     def update_chat_env(self, chat_env) -> ChatEnv:
         if len(self.seminar_conclusion) > 0 and "<INFO>" in self.seminar_conclusion:
-            chat_env.env_dict['idea'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
-        else: chat_env.env_dict['ida'] = "No hay idea"
+            chat_env.env_dict['ideas'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+        else: chat_env.env_dict['ideas'] = "No hay idea"
         
         return chat_env
 
@@ -659,12 +659,12 @@ class DI_ResumeCreation(Phase):
 
     def update_phase_env(self, chat_env):
         self.phase_env.update({"task": chat_env.env_dict['task_prompt'], 
-                               "idea": chat_env.env_dict["idea"]
+                               "ideas": chat_env.env_dict["ideas"]
                                })
         
     def update_chat_env(self, chat_env) -> ChatEnv:
         if len(self.seminar_conclusion) > 0 and "<INFO>" in self.seminar_conclusion:
-            chat_env.env_dict['idea'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
-        else: chat_env.env_dict['idea'] = "No hay idea"
+            chat_env.env_dict['ideas'] = self.seminar_conclusion.split("<INFO>")[-1].lower().replace(".", "").strip()
+        else: chat_env.env_dict['ideas'] = "No hay idea"
         
         return chat_env

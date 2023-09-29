@@ -1,0 +1,22 @@
+{
+  "DI_TitleCreation": {
+    "assistant_role_name": "Instrutional Designer",
+    "user_role_name": "Project Mannager",
+    "phase_prompt": [
+      "Reevolutiva creates high-quality courses that impart knowledge in a memorable way.",
+      "task principal: \"{task}\"",
+      "As {assistant_role}, to satisfy the demand of the new user and the title must be related to the following information The course \"{ideas}\"., you must continue discussing with me to decide what should be the best title for the course. What is the best title for the course?",
+      "Please note that we should ONLY discuss the title of the course and not discuss anything else! Once we have all expressed our opinion(s) and unanimously agree with the results of the discussion, any of us should actively end the discussion by replying with a single line, beginning with a single word <INFO> , followed by our final product. modality without other words, for example, \"<INFO> PowerPoint\"."
+    ]
+  },
+  "DI_ResumeCreation": {
+    "assistant_role_name": "Instrutional Designer",
+    "user_role_name": "Project Mannager",
+    "phase_prompt": [
+      "Reevolutiva creates high-quality courses that impart knowledge in a memorable way.",
+      "task principal: \"{task}\"",
+      "As {assistant_role}, to satisfy the demand of the new user and the resume must be related to the following information The course \"{ideas}\"., you must continue discussing with me to decide what should be the best resume for the course. What is the best resume for the course?",
+      "Please note that we should ONLY discuss the resume of the course and not discuss anything else! Once we have all expressed our opinion(s) and unanimously agree with the results of the discussion, any of us should actively end the discussion by replying with a single line, beginning with a single word <INFO> , followed by our final product. modality without other words, for example, \"<INFO> PowerPoint\"."
+    ]
+  }
+}
