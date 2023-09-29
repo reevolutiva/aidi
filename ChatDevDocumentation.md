@@ -1,41 +1,41 @@
-## Class: ChatEnv
+## Clase: ChatEnv
 
-This class is used to set up and manage the chat environment. It accepts an instance of `ChatEnvConfig` during initialization.
+Esta clase se utiliza para configurar y administrar el entorno de chat. Acepta una instancia de `ChatEnvConfig` durante la inicialización.
 
-### Methods:
+### Métodos:
 
-- `fix_module_not_found_error`: This static method is used to fix the "ModuleNotFoundError". It installs the missing module using pip.
+- `fix_module_not_found_error`: Este método estático se utiliza para corregir el "ModuleNotFoundError". Instala el módulo faltante usando pip.
 
-- `set_directory`: This method is used to set the directory of the chat environment.
+- `set_directory`: Este método se utiliza para establecer el directorio del entorno de chat.
 
-- `exist_bugs`: This method is used to check if there are any bugs in the software.
+- `exist_bugs`: Este método se utiliza para verificar si hay algún error en el software.
 
-- `recruit`: This method is used to recruit an agent by their name.
+- `recruit`: Este método se utiliza para reclutar a un agente por su nombre.
 
-- `exist_employee`: This method is used to check if an employee exists by their name.
+- `exist_employee`: Este método se utiliza para verificar si existe un empleado por su nombre.
 
-- `print_employees`: This method is used to print the names of all the employees.
+- `print_employees`: Este método se utiliza para imprimir los nombres de todos los empleados.
 
-- `update_codes`: This method is used to update the generated codes.
+- `update_codes`: Este método se utiliza para actualizar los códigos generados.
 
-- `rewrite_codes`: This method is used to rewrite the codes.
+- `rewrite_codes`: Este método se utiliza para reescribir los códigos.
 
-- `get_codes`: This method is used to get the codes.
+- `get_codes`: Este método se utiliza para obtener los códigos.
 
-- `_load_from_hardware`: This method is used to load the codes from the hardware.
+- `_load_from_hardware`: Este método se utiliza para cargar los códigos desde el hardware.
 
-- `_update_requirements`: This method is used to update the generated requirements.
+- `_update_requirements`: Este método se utiliza para actualizar los requisitos generados.
 
-- `rewrite_requirements`: This method is used to rewrite the requirements.
+- `rewrite_requirements`: Este método se utiliza para reescribir los requisitos.
 
-- `get_requirements`: This method is used to get the requirements.
+- `get_requirements`: Este método se utiliza para obtener los requisitos.
 
-- `_update_manuals`: This method is used to update the generated manuals.
+- `_update_manuals`: Este método se utiliza para actualizar los manuales generados.
 
-- `rewrite_manuals`: This method is used to rewrite the manuals.
+- `rewrite_manuals`: Este método se utiliza para reescribir los manuales.
 
-- `write_meta`: This method is used to write the metadata.
+- `write_meta`: Este método se utiliza para escribir los metadatos.
 
-- `generate_images_from_codes`: This method is used to generate images from codes.
+- `generate_images_from_codes`: Este método se utiliza para generar imágenes a partir de códigos.
 
-- `get_proposed_images_from_message`: This method is used to get the proposed images from the messages.
+- `get_proposed_images_from_message`: Este método se utiliza para obtener las imágenes propuestas a partir de los mensajes.
