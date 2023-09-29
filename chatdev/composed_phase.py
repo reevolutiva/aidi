@@ -165,15 +165,39 @@ class ComposedPhase(ABC):
 
 class Art(ComposedPhase):
     def __init__(self, **kwargs):
+        """
+        Constructor de la clase Art, que hereda de ComposedPhase.
+        Args:
+            **kwargs: Argumentos variables.
+        """
         super().__init__(**kwargs)
 
     def update_phase_env(self, chat_env):
+        """
+        Método para actualizar el entorno de la fase. En la clase Art, este método no realiza ninguna acción.
+        Args:
+            chat_env: Entorno del chat.
+        """
         pass
 
     def update_chat_env(self, chat_env):
+        """
+        Método para actualizar el entorno del chat. En la clase Art, este método simplemente devuelve el entorno del chat sin realizar ninguna modificación.
+        Args:
+            chat_env: Entorno del chat.
+        Returns:
+            chat_env: Entorno del chat sin modificaciones.
+        """
         return chat_env
 
     def break_cycle(self, chat_env) -> bool:
+        """
+        Método para definir las condiciones de interrupción del ciclo. En la clase Art, este método siempre devuelve False, lo que significa que no hay condiciones para interrumpir el ciclo.
+        Args:
+            chat_env: Entorno del chat.
+        Returns:
+            False: No hay condiciones para interrumpir el ciclo.
+        """
         return False
 
 
