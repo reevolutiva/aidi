@@ -1,13 +1,13 @@
-## Clase Art
+## Clase CodeCompleteAll
 
-La clase `Art` es una subclase de `ComposedPhase`. No tiene métodos propios más allá de los heredados de `ComposedPhase`.
+La clase `CodeCompleteAll` es una subclase de `ComposedPhase`.
 
 ### Constructor
 
-El constructor de `Art` acepta los mismos parámetros que el constructor de `ComposedPhase`.
+El constructor de `CodeCompleteAll` acepta los mismos parámetros que el constructor de `ComposedPhase`.
 
 ### Métodos
 
-- `update_phase_env(self, chat_env)`: Este método no realiza ninguna operación en la clase `Art`.
+- `update_phase_env(self, chat_env)`: Este método actualiza el entorno de la fase con la lista de archivos .py en el directorio y un diccionario que registra el número de intentos para cada archivo.
 - `update_chat_env(self, chat_env)`: Este método simplemente devuelve el `chat_env` sin realizar ninguna modificación.
-- `break_cycle(self, chat_env)`: Este método siempre devuelve `False`, lo que significa que no hay condiciones para romper el ciclo en la clase `Art`.
+- `break_cycle(self, phase_env)`: Este método devuelve `True` si no hay archivos sin implementar, lo que significa que se cumplen las condiciones para romper el ciclo.
