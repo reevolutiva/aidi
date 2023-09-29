@@ -1,17 +1,17 @@
-# Documentación para chatdev\codes.py
+## ComposedPhase
+This is an abstract base class for all composed phases. It initializes the phase name, cycle number, composition, configuration of all simple phases, configuration of all roles, model type, and log file path. It also contains abstract methods that need to be implemented in the child classes.
 
-## Clase: Codes
+## Art
+This class inherits from the ComposedPhase class. It doesn't implement any additional functionality.
 
-Esta clase se utiliza para gestionar y manipular libros de códigos. Tiene varios métodos:
+## CodeCompleteAll
+This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used to complete all the code.
 
-- `__init__(self, generated_content="")`: Inicializa la clase con el contenido generado dado. También extrae los nombres de archivo del contenido y llena los libros de códigos.
+## CodeReview
+This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for code review.
 
-- `_format_code(self, code)`: Formatea el código dado eliminando las líneas vacías.
+## HumanAgentInteraction
+This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for human-agent interaction.
 
-- `_update_codes(self, generated_content)`: Actualiza los libros de códigos con el nuevo contenido generado. También registra los cambios.
-
-- `_rewrite_codes(self, git_management)`: Reescribe los códigos en los libros de códigos en el directorio. También gestiona git si git_management es True.
-
-- `_get_codes(self)`: Devuelve una representación en cadena de los códigos en los libros de códigos.
-
-- `_load_from_hardware(self, directory)`: Carga códigos desde el directorio dado en los libros de códigos. También registra el número de archivos leídos.
+## Test
+This class inherits from the ComposedPhase class. It implements the abstract methods from the ComposedPhase class. It is used for testing.
