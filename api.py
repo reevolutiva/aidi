@@ -11,7 +11,7 @@ def process():
  
     body = request.json
 
-    comand = create_prompt_chat_dev( "chatDevCore.py" , body) 
+    comand = create_prompt_chat_dev( "chatDevCore.py" , "ReevolutivaResumen" , body) 
 
     print(comand)
    
@@ -42,13 +42,13 @@ def aidi_create():
     return 'OK', 200
 
 
-def create_prompt_chat_dev( core , body):
+def create_prompt_chat_dev( core , config , body ):
 
     res = ""
 
     for name, value in body.items():
         res = res + f"--{name} '{value}' "
     
-    response = f"python {core} {res}"
+    response = f"python {core} --config '{config}' {res}"
 
     return response

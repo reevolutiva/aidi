@@ -1,0 +1,29 @@
+[2023-29-09 12:34:09 INFO] **[Preprocessing]**
+
+**ChatDev Starts** (20230929123409)
+
+**Timestamp**: 20230929123409
+
+**config_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\ChatChainConfig.json
+
+**config_phase_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\PhaseConfig.json
+
+**config_role_path**: C:\Users\dell\Dev\py\ChatDev\CompanyConfig\ReevoltuivaResumen\RoleConfig.json
+
+**task_prompt**: Develop a basic Gomoku game.
+
+**project_name**: intrucional_desing
+
+**Log File**: C:\Users\dell\Dev\py\ChatDev\WareHouse\intrucional_desing_Reevolutiva_20230929123409.log
+
+**ChatDevConfig**:
+ ChatEnvConfig.clear_structure: True
+ChatEnvConfig.brainstorming: False
+
+
+**ChatGPTConfig**:
+ ChatGPTConfig(temperature=0.2, top_p=1.0, n=1, stream=False, stop=None, max_tokens=None, presence_penalty=0.0, frequency_penalty=0.0, logit_bias={}, user='')
+
+
+
+[2023-29-09 12:34:11 INFO] flask app.py did not start for online log
