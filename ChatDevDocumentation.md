@@ -1,16 +1,16 @@
-## Clase CodeCompleteAll
+## Clase CodeReview
 
-La clase `CodeCompleteAll` es una subclase de `ComposedPhase` que se utiliza para completar el código de todos los archivos .py en un directorio especificado.
+La clase `CodeReview` es una subclase de `ComposedPhase` que se utiliza para revisar el código.
 
 ### Constructor
 
-El constructor de `CodeCompleteAll` acepta los mismos parámetros que el constructor de `ComposedPhase`.
+El constructor de `CodeReview` acepta los mismos parámetros que el constructor de `ComposedPhase`.
 
 ### Métodos
 
-- `update_phase_env(self, chat_env)`: Este método busca todos los archivos .py en el directorio especificado y los añade al entorno de la fase.
+- `update_phase_env(self, chat_env)`: Este método actualiza el entorno de la fase, pero no realiza ninguna acción específica en la clase `CodeReview`.
 - `update_chat_env(self, chat_env)`: Este método simplemente devuelve el entorno del chat sin realizar ninguna modificación.
-- `break_cycle(self, phase_env)`: Este método devuelve True si no hay archivos sin implementar, lo que significa que se interrumpe el ciclo.
+- `break_cycle(self, phase_env)`: Este método devuelve True si la revisión del código ha terminado, lo que significa que se interrumpe el ciclo.
 
 La clase `ComposedPhase` es una clase abstracta que define la estructura básica de una fase compuesta en el chat.
 
