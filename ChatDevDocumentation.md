@@ -1,21 +1,13 @@
-## Clase Test
+## Clase Documents
 
-La clase `Test` es una subclase de `ComposedPhase`. Esta clase se utiliza para representar la fase de pruebas en el proceso de desarrollo de chat.
+La clase `Documents` se utiliza para manejar y actualizar documentos generados dinámicamente.
 
 ### Métodos
 
-#### `__init__(self, **kwargs)`
+- `__init__(self, generated_content = "", parse = True, predifined_filename = None)`: Este es el constructor de la clase. Inicializa la clase con el contenido generado, si se proporciona. Si `parse` es True, el contenido generado se analiza para extraer los documentos. Si se proporciona `predifined_filename`, el contenido generado se asigna a este nombre de archivo.
 
-Este es el constructor de la clase. Inicializa la instancia de la clase.
+- `_update_docs(self, generated_content, parse = True, predifined_filename = "")`: Este método actualiza los documentos existentes con el nuevo contenido generado. Si `parse` es True, el nuevo contenido generado se analiza para extraer los documentos. Si se proporciona `predifined_filename`, el nuevo contenido generado se asigna a este nombre de archivo.
 
-#### `update_phase_env(self, chat_env)`
+- `_rewrite_docs(self)`: Este método reescribe todos los documentos con el contenido actual en la clase.
 
-Este método se utiliza para actualizar el entorno de la fase. En la clase `Test`, este método no realiza ninguna acción.
-
-#### `update_chat_env(self, chat_env)`
-
-Este método se utiliza para actualizar el entorno del chat. En la clase `Test`, este método simplemente devuelve el entorno del chat sin realizar ninguna modificación.
-
-#### `break_cycle(self, phase_env) -> bool`
-
-Este método se utiliza para definir las condiciones de interrupción del ciclo. En la clase `Test`, este método devuelve `True` si no existen errores, lo que significa que se interrumpe el ciclo.
+- `_get_docs(self)`: Este método devuelve el contenido de todos los documentos en la clase.
