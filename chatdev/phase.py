@@ -633,3 +633,13 @@ class Manual(Phase):
         chat_env._update_manuals(self.seminar_conclusion)
         chat_env.rewrite_manuals()
         return chat_env
+    
+
+## Codigo para AI DI
+
+class DI_TitleCreation(Phase):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def update_phase_env(self, chat_env):
+        self.phase_env.update({"form": chat_env.env_dict['form']})
