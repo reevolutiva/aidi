@@ -1,59 +1,41 @@
-# Documentación de la Clase ChatChain
+## Class: ChatEnv
 
-La clase `ChatChain` es un componente clave del módulo chatdev. Es responsable de gestionar la ejecución de una cadena de fases de chat, cada una de las cuales representa un paso en el proceso de desarrollo de software.
+This class is used to set up and manage the chat environment. It accepts an instance of `ChatEnvConfig` during initialization.
 
-## Métodos Clave
+### Methods:
 
-- `__init__`: Inicializa la instancia de ChatChain con rutas de configuración, indicaciones de tareas, nombres de proyectos y organizaciones, y un tipo de modelo.
+- `fix_module_not_found_error`: This static method is used to fix the "ModuleNotFoundError". It installs the missing module using pip.
 
-- `make_recruitment`: Recluta a todos los empleados especificados en la configuración.
+- `set_directory`: This method is used to set the directory of the chat environment.
 
-- `execute_step`: Ejecuta una sola fase en la cadena.
+- `exist_bugs`: This method is used to check if there are any bugs in the software.
 
-- `execute_chain`: Ejecuta toda la cadena basándose en la configuración.
+- `recruit`: This method is used to recruit an agent by their name.
 
-- `get_logfilepath`: Devuelve la ruta del archivo de registro.
+- `exist_employee`: This method is used to check if an employee exists by their name.
 
-- `pre_processing`: Realiza la configuración inicial, incluyendo la limpieza de la estructura, la configuración del directorio, la copia de archivos de configuración, y la inicialización de la indicación de la tarea.
+- `print_employees`: This method is used to print the names of all the employees.
 
-- `post_processing`: Resume la producción y mueve los archivos de registro al directorio del software.
+- `update_codes`: This method is used to update the generated codes.
 
-- `self_task_improve`: Pide al agente que mejore la indicación de la consulta del usuario.
+- `rewrite_codes`: This method is used to rewrite the codes.
 
-## Uso
+- `get_codes`: This method is used to get the codes.
 
-Para usar la clase `ChatChain`, necesitas proporcionar las rutas a los archivos de configuración, la indicación de la tarea, y los nombres del proyecto y de la organización. Después de inicializar la instancia, puedes ejecutar toda la cadena con el método `execute_chain`.
+- `_load_from_hardware`: This method is used to load the codes from the hardware.
 
-```python
-chat_chain = ChatChain(config_path, config_phase_path, config_role_path, task_prompt, project_name, org_name)
-chat_chain.execute_chain()
-```
+- `_update_requirements`: This method is used to update the generated requirements.
 
-Esto ejecutará toda la cadena de fases de chat según lo especificado en la configuración, produciendo un archivo de registro en el proceso.
+- `rewrite_requirements`: This method is used to rewrite the requirements.
 
-## Documentación de la Clase ChatEnvConfig
+- `get_requirements`: This method is used to get the requirements.
 
-La clase `ChatEnvConfig` es una parte integral del módulo chatdev. Se utiliza para configurar el entorno de chat, incluyendo la estructura, la lluvia de ideas, el diseño de la interfaz de usuario y la gestión de Git.
+- `_update_manuals`: This method is used to update the generated manuals.
 
-### Atributos Clave
+- `rewrite_manuals`: This method is used to rewrite the manuals.
 
-- `clear_structure`: Un booleano que indica si se debe limpiar la estructura existente.
-- `brainstorming`: Un booleano que indica si se debe realizar una sesión de lluvia de ideas.
-- `gui_design`: Un booleano que indica si se debe diseñar una interfaz de usuario gráfica.
-- `git_management`: Un booleano que indica si se debe gestionar el repositorio de Git.
+- `write_meta`: This method is used to write the metadata.
 
-### Métodos Clave
+- `generate_images_from_codes`: This method is used to generate images from codes.
 
-- `__init__`: Inicializa la instancia de ChatEnvConfig con los parámetros de configuración.
-
-- `__str__`: Devuelve una representación en cadena de la configuración del entorno de chat.
-
-## Uso
-
-Para usar la clase `ChatEnvConfig`, necesitas proporcionar los parámetros de configuración durante la inicialización.
-
-```python
-chat_env_config = ChatEnvConfig(clear_structure=True, brainstorming=True, gui_design=True, git_management=True)
-```
-
-Esto creará una configuración de entorno de chat que puede ser utilizada para inicializar una instancia de `ChatEnv`.
+- `get_proposed_images_from_message`: This method is used to get the proposed images from the messages.
