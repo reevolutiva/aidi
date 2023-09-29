@@ -15,3 +15,11 @@ Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos 
 
 ## Test
 Esta clase hereda de la clase ComposedPhase. Implementa los métodos abstractos de la clase ComposedPhase. Se utiliza para pruebas.
+## Codes
+Esta clase se utiliza para gestionar y manipular los codebooks. Tiene varios métodos:
+  - `__init__`: Inicializa la clase con los parámetros dados.
+  - `_format_code`: Formatea el código dado.
+  - `_update_codes`: Actualiza los códigos con el nuevo contenido generado.
+  - `_rewrite_codes`: Reescribe los códigos en el directorio dado.
+  - `_get_codes`: Devuelve el contenido de los codebooks.
+  - `_load_from_hardware`: Carga los codebooks desde el directorio dado.
